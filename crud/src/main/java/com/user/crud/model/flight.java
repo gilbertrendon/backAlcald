@@ -10,18 +10,18 @@ public class flight {
 	@Id
 	private int idflight;
 	private String state;
-	private Date hourinit;
-	private Date hourend;
+	private String hourinit;
+	private String hourend;
 	private String cityinit;
 	private String cityend;
-	private int[] seats = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	private int seats;
 	
 	public flight() {
 	
 	}
 	
 	
-	public flight(int idflight, String state, Date hourinit, Date hourend, String cityinit, String cityend, 
+	public flight(int idflight, String state, String hourinit, String hourend, String cityinit, String cityend,int seats, 
 			double cost) {
 		
 		super();
@@ -31,6 +31,7 @@ public class flight {
 		this.hourend = hourend;
 		this.cityinit = cityinit;
 		this.cityend = cityend;
+		this.seats = seats;
 		this.cost = cost;
 	}
 	private double cost;
@@ -46,16 +47,16 @@ public class flight {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public Date getHourinit() {
+	public String getHourinit() {
 		return hourinit;
 	}
-	public void setHourinit(Date hourinit) {
+	public void setHourinit(String hourinit) {
 		this.hourinit = hourinit;
 	}
-	public Date getHourend() {
+	public String getHourend() {
 		return hourend;
 	}
-	public void setHourend(Date hourend) {
+	public void setHourend(String hourend) {
 		this.hourend = hourend;
 	}
 	public String getCityinit() {
@@ -70,10 +71,10 @@ public class flight {
 	public void setCityend(String cityend) {
 		this.cityend = cityend;
 	}
-	public int[] getSeats() {
+	public int getSeats() {
 		return seats;
 	}
-	public void setSeats(int[] seats) {
+	public void setSeats(int seats) {
 		this.seats = seats;
 	}
 	public double getCost() {

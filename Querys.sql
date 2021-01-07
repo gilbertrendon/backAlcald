@@ -15,8 +15,8 @@ CREATE TABLE `user` (
 -- esto implica que incluso para dos ciudades en horarios diferentes podría variar el costo
 -- asientos es un arreglo
 --los estados del vuelo pueden ser in progress, pending, over,...  
--- Para los asientos simplemente será un vector con n posiciones que son el número de asientos
--- cero si está vacío uno si está ocupado
+-- Para los asientos simplemente se pondrá para cada vuelo 20 asientos y cada que se reserva se le resta
+-- uno a los asientos
 
 --reserv(`idreserv`, `iduser`, `idflight`,`valid`  ) 
 -- si la (horaini >  horafinvieja) || (horafin <  horainivieja) SI SE PUEDE HACER LA RESERVA 
@@ -43,14 +43,14 @@ insert into user(id,registred,name,age) values(1152441480,'false','Natalia Galla
 --Tue Jan 19 12:00:00 COT 2021
 --Tue Jan 19 15:00:00 COT 2021
 
-insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,cost) 
-values(1,'pending','Mon Jan 18 01:00:00 COT 2021','Mon Jan 18 08:00:00 COT 2021','Medellín','Bogotá','100000')
+insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
+values(1,'pending','2021/01/18/01','2021/01/18/08','Medellín','Bogotá',20,'100000')
 
 insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
-values(2,'pending','Mon Jan 18 09:00:00 COT 2021','Mon Jan 18 17:00:00 COT 2021 ','Medellín','Bogotá','100000')
+values(2,'pending','2021/01/18/09','2021/01/18/17','Medellín','Bogotá',20,'100000')
 
 insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
-values(3,'pending','Tue Jan 19 08:00:00 COT 2021','Jan 19 11:00:00 COT 2021','Medellín','Rionegro','7500')
+values(3,'pending','Tue Jan 19 08:00:00 COT 2021','Jan 19 11:00:00 COT 2021','Medellín','Rionegro',20,'7500')
 
 insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
-values(3,'pending','Tue Jan 19 12:00:00 COT 2021','Jan 19 15:00:00 COT 2021','Medellín','Rionegro','7500')
+values(3,'pending','Tue Jan 19 12:00:00 COT 2021','Jan 19 15:00:00 COT 2021','Medellín','Rionegro',20,'7500')
