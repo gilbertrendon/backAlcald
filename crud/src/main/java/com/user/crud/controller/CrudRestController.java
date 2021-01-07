@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.user.crud.model.User;
+import com.user.crud.model.flight;
 import com.user.crud.services.CrudService;
 
 @RestController
@@ -26,6 +27,11 @@ public class CrudRestController {
 	
 	
 	//For the flights
-	//@GetMapping("/")
+	@GetMapping("/getflightlist")
+    public List<flight> fetchFlights(){
+    	List<flight> flights = new ArrayList<flight>();
+    	flights = service.fetchflightList();
+    	return flights;
+    }
 	
 }
