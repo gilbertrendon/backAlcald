@@ -54,3 +54,5 @@ values(3,'pending','Tue Jan 19 08:00:00 COT 2021','Jan 19 11:00:00 COT 2021','Me
 
 insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
 values(3,'pending','Tue Jan 19 12:00:00 COT 2021','Jan 19 15:00:00 COT 2021','Medellín','Rionegro',20,'7500')
+
+--En el módulo de login o loguéo se puede hacer de tal forma que la contraseña sea el documento de cada usuario(user)

@@ -8,3 +8,12 @@ Mientras que el front end se desarrollará con angular teniendo en cuenta los di
 
 http://localhost:8088/h2-console/login.jsp?jsessionid=320a9ba6122f239045a26b82047919a7
 
+# Json para insertar en BD
+
+{
+    "idreserv": 1,
+    "iduser": 1,
+    "idflight": 1,
+    "valid": 0
+
+}

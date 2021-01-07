@@ -5,12 +5,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 //import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.user.crud.model.User;
 import com.user.crud.model.flight;
+import com.user.crud.model.reserv;
 import com.user.crud.services.CrudService;
 
 @RestController
@@ -33,5 +36,12 @@ public class CrudRestController {
     	flights = service.fetchflightList();
     	return flights;
     }
+    
+    @PostMapping("/addreserv")
+    public reserv saveReserv(@RequestBody reserv resv) {
+    	return service.saveReservToDB(resv);
+    }
+    
+    
 	
 }
