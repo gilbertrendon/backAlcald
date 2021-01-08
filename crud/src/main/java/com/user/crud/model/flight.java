@@ -15,7 +15,7 @@ public class flight {
 	private String cityinit;
 	private String cityend;
 	private int seats;
-	
+	private double cost;
 	public flight() {
 	
 	}
@@ -34,7 +34,7 @@ public class flight {
 		this.seats = seats;
 		this.cost = cost;
 	}
-	private double cost;
+
 	public int getIdflight() {
 		return idflight;
 	}
