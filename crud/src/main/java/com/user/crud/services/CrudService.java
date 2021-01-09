@@ -37,4 +37,8 @@ public class CrudService {
 		return repov.save(resv);
 	}
 	
+	public User saveUserToDB(User user) {
+		return repo.save(user);
+	}
+	
 }

@@ -53,8 +53,8 @@ CREATE TABLE `user` (
 --PARA HACER INSERCIONES EN BD
 
 --USERS
-insert into user(id,registred,name,age) values(1152441479,'false','Gilbert Rendón',28)
-insert into user(id,registred,name,age) values(1152441480,'false','Natalia Gallardo',16)
+insert into user(id,registred,name,age) values(1152441479,'0','Gilbert Rendón',28)
+insert into user(id,registred,name,age) values(1152441480,'0','Natalia Gallardo',16)
 
 --FLIGHTS
 -- Formato de hora en Colombia Thu Jan 07 11:19:20 COT 2021
@@ -81,6 +81,6 @@ insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost)
 values(3,'pending','Tue Jan 19 08:00:00 COT 2021','Jan 19 11:00:00 COT 2021','Medellín','Rionegro',20,'7500')
 
 insert into flight(idflight,state,hourinit,hourend,cityinit,cityend,seats,cost) 
-values(3,'pending','Tue Jan 19 12:00:00 COT 2021','Jan 19 15:00:00 COT 2021','Medellín','Rionegro',20,'7500')
+values(4,'pending','Tue Jan 19 12:00:00 COT 2021','Jan 19 15:00:00 COT 2021','Medellín','Rionegro',20,'7500')
 
 --En el módulo de login o loguéo se puede hacer de tal forma que la contraseña sea el documento de cada usuario(user)

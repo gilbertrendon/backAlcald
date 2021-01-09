@@ -52,10 +52,16 @@ public class CrudRestController {
 
     
     @PostMapping("/addreserv")
+	@CrossOrigin(origins = "http://localhost:4200")
     public reserv saveReserv(@RequestBody reserv resv) {
     	return service.saveReservToDB(resv);
     }
     
+    @PostMapping("/adduser")
+	@CrossOrigin(origins = "http://localhost:4200")
+    public User saveuser(@RequestBody User user) {
+    	return service.saveUserToDB(user);
+    }
     
 	
 }

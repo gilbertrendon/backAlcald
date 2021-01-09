@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class User {
 	@Id
 	private int id;
-	private boolean registred;
+	private int registred;
 	private String name;
 	private int age;
 	public int getId() {
@@ -17,10 +17,10 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public boolean isregistred() {
+	public int isregistred() {
 		return registred;
 	}
-	public void setRegistrado(boolean registrado) {
+	public void setRegistrado(int registrado) {
 		this.registred = registrado;
 	}
 	public String getname() {
@@ -40,7 +40,7 @@ public class User {
 		
 	}
 	
-	public User(int id, boolean registred, String name, int age) {
+	public User(int id, int registred, String name, int age) {
 		super();
 		this.id = id;
 		this.registred = registred;
